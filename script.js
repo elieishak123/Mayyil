@@ -54,11 +54,16 @@ planIcon.addEventListener("click", () => {
             }
         })
         .then((data) => {
-            console.log('User verified:', data);
-            window.location.href = "plan.html"; // Redirect to planner
+            console.log('User verified:', data); // Log user verification
         })
-        
+        .catch((error) => {
+            console.warn('Token verification failed:', error.message); // Log the error for debugging
+        })
+        .finally(() => {
+            window.location.href = "plan.html"; // Redirect to planner regardless of token status
+        });
 });
+
 
 
 // Function to update the UI state based on login status
