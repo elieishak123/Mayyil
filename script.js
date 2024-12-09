@@ -45,23 +45,9 @@ iconClose.addEventListener('click', () => {
 
 // Event listener for "My Plan" button
 planIcon.addEventListener("click", () => {
-    fetch(`${backendURL}/verify-token`, { credentials: 'include' })
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Invalid or missing token');
-            }
-        })
-        .then((data) => {
-            console.log('User verified:', data); // Log user verification
-        })
-        .catch((error) => {
-            console.warn('Token verification failed:', error.message); // Log the error for debugging
-        })
-        .finally(() => {
-            window.location.href = "plan.html"; // Redirect to planner regardless of token status
-        });
+    
+    window.location.href = "plan.html"; // Redirect to planner regardless of token status
+        
 });
 
 
