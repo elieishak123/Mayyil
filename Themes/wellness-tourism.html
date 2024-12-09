@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Tourism - Mayyil Aa Baladi</title>
+    <link rel="stylesheet" href="festivals.css">
+</head>
+<body>
+
+    <!-- Image Slider Section -->
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/wellness1.jpg');"></div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/wellness2.jpg');"></div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/wellness3.jpg');"></div>
+            
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+       
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-container">
+
+        <!-- Key Highlights -->
+        <section class="highlights">
+            <h2 class="highlights-description">
+                <span style="color: #FFA07A; font-weight: bold;">Wellness and Tourism</span>
+                We all need to treat ourselves sometimes and what better way of doing so than by having a relaxing and invigorating break?
+                Lebanon certainly has what it takes to be the perfect wellness gateway.
+                With fantastic hotels providing state-of-the-art spa facilities and offering the latest trends in treatments combined with the savoir-faire and warmth of the Lebanese people, you’re in for a treat!
+                Choose the hills of the Lebanese mountains, the soothing sea-views of our coastal hotels or stay right in the heart of the city and let the relaxation begin!
+            </h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <img src="images/spa1.jpg" alt="Spa">
+                    <div class="caption-overlay">
+                        <h3>Al Bustan Hotel & Spa</h3>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/spa2.jpg" alt="Spa">
+                    <div class="caption-overlay">
+                        <h3>Four Seasons Hotel Beirut</h3>
+                        
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/spa3.jpg" alt="Spaa">
+                    <div class="caption-overlay">
+                        <h3>Grand Hills, A Luxury Collection Hotel & Spa</h3>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information Cards -->
+        <section class="info-section">
+            <h2 class="info-title">Seasides and Beaches that you shouldn't miss</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <img src="images/smallville.webp" alt="SmallVille">
+                    <h3>The Smallville Hotel</h3>
+                    <p>"Discover the perfect blend of contemporary style and vibrant energy at Smallville Hotel Lebanon, a unique urban retreat in the heart of Beirut, offering exceptional hospitality, stunning views, and unforgettable experiences."
+                    </p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/spa4.jpg" alt="Spaa">
+                    <h3> The Key Aparthotel</h3>
+                    <p>"The Key Aparthotel: A sophisticated urban retreat in the heart of Beirut, combining contemporary design with exceptional comfort, spacious accommodations, and a commitment to personalized service, ensuring an unforgettable stay whether for business or leisure."
+                    </p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/spa5.jpg" alt="Spa">
+                    <h3>Le Vendôme Intercontinental Beirut</h3>
+                    <p>"Le Vendôme Intercontinental Beirut: A timeless symbol of elegance and luxury, offering refined accommodations, exceptional dining, and breathtaking views of the Mediterranean, all in the heart of Beirut’s vibrant cityscape."</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+              
+
+
+
+            </div>
+        </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Mayyil Aa Baladi |Wellness and tourism, redefined</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
+  

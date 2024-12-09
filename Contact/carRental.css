@@ -1,0 +1,136 @@
+/* Importing Google Font for a clean and modern look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* General Styles for the Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9; /* Soft white background for cleanliness */
+    color: #333; /* Dark gray text for readability */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #89CFF0; /* Baby blue for headings */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333; /* Dark gray for clarity */
+}
+
+/* Container for the content */
+.content {
+    background: #ffffff; /* Pure white for a clean look */
+    padding: 40px;
+    max-width: 900px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Individual Rental Information Card */
+.styled-paragraph {
+    background-color: #89CFF0; /* Baby blue for cards */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.styled-paragraph:hover {
+    background-color: #74b9e0; /* Slightly darker blue on hover */
+    transform: translateY(-5px);
+}
+
+/* Styling for each paragraph of information */
+p {
+    margin: 12px 0;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #333; /* Dark gray text for readability */
+}
+
+p a {
+    color: #005f99; /* Deeper blue for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+p a:hover {
+    color: #003f66; /* Darker blue for better visual feedback */
+    text-decoration: underline;
+}
+
+/* Styling Links */
+a {
+    color: #005f99; /* Baby blue shade for links */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #003f66;
+}
+
+/* Highlighting Green Word (replacing with a shade of blue) */
+.green-word {
+    color: #005f99; /* Deep blue for emphasis */
+    font-weight: 700;
+}
+
+/* Adding a footer button to see more car rentals */
+.footer-button {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #89CFF0;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.footer-button:hover {
+    background-color: #74b9e0; /* Slightly darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .footer-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}

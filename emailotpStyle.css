@@ -1,0 +1,168 @@
+/* Basic Reset for Margin and Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f0f0f0; /* Light background for contrast */
+  font-family: Arial, sans-serif;
+}
+
+/* OTP Verification Styles */
+.container {
+  background: #ffffff; /* White background for the container */
+  width: 400px;
+  border-radius: 5px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadInShow 0.3s;
+}
+
+@keyframes fadInShow {
+  0% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.form-group {
+  margin: 20px 0;
+  text-align: start;
+}
+
+.form-group input {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #a3a3a3;
+}
+
+.otp-form {
+  display: block;
+  margin: 20px 0;
+}
+
+.otp-form p {
+  margin: 20px;
+  color: #162938;
+}
+
+.otp-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.otp-group input {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  font-size: 25px;
+  text-align: center;
+  outline: none;
+  border: 1px solid #a3a3a3;
+  border-radius: 5px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button.disable {
+  opacity: 0.6;
+  pointer-events: none;
+  user-select: none;
+  background: rgba(22, 41, 56, 0.5);
+}
+
+.error-shake {
+  animation: shake 0.2s ease-in-out 0s 2;
+}
+
+@keyframes shake {
+  0% {
+      margin-left: 0rem;
+  }
+  25% {
+      margin-left: 0.5rem;
+  }
+  75% {
+      margin-left: -0.5rem;
+  }
+  100% {
+      margin-left: 0rem;
+  }
+}
+
+/* Styling for the Next button in OTP verification */
+#nextButton {
+  width: 100%; /* Full width like the login button */
+  height: 45px; /* Same height as the login button */
+  background: #162938; /* Dark blue background */
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff; /* White text */
+  font-weight: 500;
+  transition: background 0.3s ease; /* Smooth transition effect */
+  margin-top: 20px; /* Optional: Adjust spacing if needed */
+}
+
+/* Hover effect for the Next button */
+#nextButton:hover:enabled {
+  background: #0d1b2a; /* Slightly darker blue on hover */
+}
+
+/* Disable state for Next button */
+#nextButton:disabled {
+  background: rgba(22, 41, 56, 0.5); /* Semi-transparent blue when disabled */
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.7); /* Lighter text when disabled */
+}
+
+/* Styling for the Verify button in OTP verification */
+#verifyButton {
+  width: 100%; /* Full width like the Next button */
+  height: 45px; /* Same height as the Next button */
+  background: #162938; /* Dark blue background */
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff; /* White text */
+  font-weight: 500;
+  transition: background 0.3s ease; /* Smooth transition effect */
+  margin-top: 20px; /* Optional: Adjust spacing if needed */
+}
+
+/* Hover effect for the Verify button */
+#verifyButton:hover:enabled {
+  background: #0d1b2a; /* Slightly darker blue on hover */
+}
+
+/* Disable state for Verify button */
+#verifyButton:disabled {
+  background: rgba(22, 41, 56, 0.5); /* Semi-transparent blue when disabled */
+  cursor: not-allowed;
+  color: rgba(255, 255, 255, 0.7); /* Lighter text when disabled */
+}

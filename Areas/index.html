@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="header-text" id="header">
+        <h1>Explore Lebanon Areas</h1>
+    </div>
+    
+    <div class="wrapper">
+        <div class="card">
+            <img src="image/pic1.jpg" alt="">
+            <div class="info">
+                <h1>Beirut</h1>
+                <p>Beirut, Lebanon's capital, is a historic city that blends
+                    ancient culture with modern vibrancy. With a rich heritage
+                    spanning over 5,000 years, it boasts diverse architecture, 
+                    a lively arts scene, and renowned cuisine</p>
+                <a href="Beirut.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image/pic2.jpg" alt="">
+            <div class="info">
+                <h1>Mount Lebanon</h1>
+                <p>Mount Lebanon (Jabal Lubnan) is a beautiful mountain 
+                    range in Lebanon, famous for its stunning views, green 
+                    valleys, and ancient cedar trees. It offers outdoor 
+                    activities like hiking and skiing, making it a popular 
+                    destination for nature lovers.</p>
+                <a href="MountLebanon.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image/pic3.jpg" alt="">
+            <div class="info">
+                <h1>North Lebanon</h1>
+                <p>North Lebanon is a scenic region known for its mountains, valleys
+                    and Mediterranean coastline. It features charming villages, 
+                    historic sites, and delicious Lebanese cuisine. Key attractions
+                    include Tripoli, with its historic architecture, and the beautiful
+                     Qadisha Valley</p>
+                <a href="NorthLebanon.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image/pic4.jpg" alt="">
+            <div class="info">
+                <h1>South Lebanon</h1>
+                <p>South Lebanon is a beautiful region known for its hills, valleys, 
+                    and Mediterranean coastline. It features historic sites like Tyre, 
+                    famous for its Roman ruins, and charming villages. The area offers 
+                    delicious local cuisine and outdoor activities, making it a great 
+                    destination for nature and culture enthusiasts.</p>
+                <a href="SouthLebanon.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image/bekaa-valley.webp" alt="">
+            <div class="info">
+                <h1>Beqaa Valley</h1>
+                <p>The Beqaa Valley is a fertile region in Lebanon, nestled between 
+                    two mountain ranges. Known for its rich agriculture, it produces 
+                    grapes, apples, and vegetables. The valley also features historical 
+                    sites, including Roman ruins, and has a diverse cultural landscape. 
+                    Its climate is hot in summer and mild in winter.</p>
+                <a href="beqaa.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="image/pic6.png" alt="">
+            <div class="info">
+                <h1>Akkar</h1>
+                <p>Akkar, in northern Lebanon, is a picturesque tourist destination 
+                    known for its beautiful mountains and valleys ideal for hiking. 
+                    Visitors can explore historic sites like the Crusader Castle of 
+                    Qalaat al-Numan and experience local culture in traditional villages.</p>
+                <a href="Akkar.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image/pic7.jpg" alt="">
+            <div class="info">
+                <h1>Baalbek</h1>
+                <p>Baalbek is a historic city in Lebanon famous for its impressive Roman 
+                    ruins, including the Temple of Bacchus and the Temple of Jupiter. 
+                    It attracts visitors with its ancient architecture and rich history. 
+                    Baalbek also features vibrant local culture, festivals, and traditional 
+                    markets.</p>
+                <a href="Baalbek.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image/pic8.jpg" alt="">
+            <div class="info">
+                <h1>Jbeil</h1>
+                <p>The Lebanese Coast, especially in Jbeil (Byblos), is known for 
+                    its beautiful beaches and historic sites. Jbeil features ancient 
+                    ruins and a Roman amphitheater. The area offers 
+                    lovely beaches for sunbathing and water sports, along with a charming 
+                    souk filled with shops and restaurants.</p>
+                <a href="Jbeil.html" class="readmore">Read More</a>
+                <a href="" target="_blank" class="btn">Directions</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const directionButtons = document.querySelectorAll(".btn");
+
+            directionButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const destination = button.parentElement.querySelector("h1").innerText;
+                    const encodedDestination = encodeURIComponent(destination);
+
+                    // Corrected the URL by wrapping it with backticks
+                    const directionsUrl = `https://www.google.com/maps/dir/My+Location/${encodedDestination}`;
+                    window.open(directionsUrl, "_blank");
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
+

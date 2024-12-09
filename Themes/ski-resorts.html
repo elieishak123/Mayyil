@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skiing in Lebanon - Mayyil Aa Baladi</title>
+    <link rel="stylesheet" href="ski-resorts.css">
+</head>
+<body>
+    
+    <!-- Image Slider Section -->
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/ski1.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Snow-Capped Peaks;</span>
+                    <span class="caption-text">Embrace the thrill of skiing down Lebanon's pristine slopes.</span>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/ski2.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Winter Wonderland;</span>
+                    <span class="caption-text">Discover Lebanon’s unique blend of snow sports and breathtaking landscapes.</span>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/ski3.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Endless Adventure;</span>
+                    <span class="caption-text">From skiing to snowboarding, enjoy winter activities for all ages.</span>
+                </div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="header-overlay">
+            <h1>Discover Skiing in Lebanon</h1>
+            <p>Snow-capped mountains, vibrant resorts, and thrilling slopes await you in Lebanon.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-container">
+        
+        <!-- Key Highlights -->
+        <section class="highlights">
+            <h2 class="highlights-description">
+                <span style="color: #89CFF0; font-weight: bold;">Skiing in Lebanon: Where Winter Dreams Come True!</span>
+                Enjoy the excitement of skiing in Lebanon’s stunning mountains. With well-equipped resorts, scenic views, and slopes for all skill levels, Lebanon is a hidden gem for winter sports lovers.
+            </h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <img src="images/ski4.jpg" alt="Mzaar Ski Resort">
+                    <div class="caption-overlay">
+                        <h3>Faraya Annual Snow Festival</h3>
+                        <p>Experience the magic of winter with Faraya’s Annual Snow Festival in February! Enjoy ski and snowboard competitions, breathtaking firework displays, and cozy bonfires, creating a festive winter wonderland in the mountains.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/ski5.jpg" alt="Laqlouq Resort">
+                    <div class="caption-overlay">
+                        <h3>Mzaar Winter Carnival</h3>
+                        <p>Get ready for the lively Mzaar Winter Carnival! Featuring torchlight parades, exciting costume contests, and slope-side games, this festival is a winter favorite. End the night with a snowman-building contest and live music under the stars!
+
+                        </p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/ski6.jpg" alt="Faraya">
+                    <div class="caption-overlay">
+                        <h3>Cedars Snow Sculpture Festival
+                        </h3>
+                        <p>Celebrate the winter season at the Cedars Snow Sculpture Festival, where artists craft beautiful snow sculptures against the stunning cedar trees. Vote for your favorite sculpture, enjoy live music, and explore local art in this unique winter experience.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2 class="info-title">Lebanon’s Top Ski Destinations</h2>
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <img src="images/ski7.jpg" alt="Mzaar Mountain View">
+                    <h3>Mzaar Kfardebian</h3>
+                    <p>Lebanon's largest ski area, offering over 80 kilometers of trails for all levels, along with high-end hotels, restaurants, and nightlife options.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/ski8.jpg" alt="Cedars of Lebanon">
+                    <h3>The Cedars</h3>
+                    <p>Famous for its historical cedar trees and high-altitude slopes, the Cedars offers snowboarding, skiing, and stunning winter landscapes.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/ski9.jpg" alt="Zaarour Club">
+                    <h3>Zaarour Club</h3>
+                    <p>Located just a short drive from Beirut, Zaarour provides well-groomed slopes, family activities, and breathtaking views of the valleys below.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/ski10.jpg" alt="Laqlouq Landscape">
+                    <h3>Laqlouq</h3>
+                    <p>Ideal for families, Laqlouq offers beginner-friendly trails and scenic areas perfect for snowshoeing and Nordic skiing.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/ski11.jpg" alt="Faraya Village">
+                    <h3>Faraya</h3>
+                    <p>A favorite for adventurers, Faraya combines steep slopes with cozy chalets, allowing visitors to enjoy both skiing and a warm retreat.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Mayyil Aa Baladi | Discover the Heart of Lebanon</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+        
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let captions = document.getElementsByClassName("caption");
+        
+            if (slideIndex >= slides.length) { 
+                slideIndex = 0; 
+            }
+            if (slideIndex < 0) { 
+                slideIndex = slides.length - 1; 
+            }
+        
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                captions[i].style.opacity = "0"; 
+            }
+        
+            slides[slideIndex].style.display = "block";
+            captions[slideIndex].style.opacity = "1"; 
+        }
+    </script>
+</body>
+</html>

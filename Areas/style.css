@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+    background: white;
+}
+
+.header-text {
+    position: fixed; /* Fixed position to stay at the top */
+    top: 20px; /* Adjust vertical position as needed */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Offset by half its width */
+    text-align: center; /* Center align the text */
+    color: #000; /* Text color */
+    z-index: 10; /* Ensure it appears above other content */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade */
+    opacity: 1; /* Initial opacity */
+    visibility: visible; /* Initially visible */
+}
+
+.header-text.hidden {
+    opacity: 0; /* Fade out */
+    visibility: hidden; /* Hide the element */
+}
+
+.header-text h1 {
+    margin: 0; /* Remove default margin */
+    font-weight: bold;
+    font-size: 2rem; /* Font size for the header */
+    font-family: 'Montserrat', sans-serif; /* Custom font for the header */
+    background: rgba(255, 255, 255, 0.8); /* Optional: light background for visibility */
+    padding: 10px; /* Optional: padding around text */
+    border-radius: 5px; /* Optional: round corners */
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center align items horizontally */
+    width: 90%;
+    max-height: calc(100vh - 80px); /* Max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px 0; /* Vertical padding */
+    padding-top: 100px; /* Add padding to the top */
+}
+
+.card {
+    width: calc(33.333% - 20px); /* Adjust width to fit 3 cards */
+    height: 360px; /* Fixed height */
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 1rem;
+    position: relative;
+    margin: 10px; /* Add margin for spacing */
+    transition: 0.5s all ease-in-out;
+    border-radius: 15px; /* Add rounded corners */
+    overflow: hidden; /* Ensures the content respects the rounded corners */
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgb(0, 0, 0));
+    z-index: 2;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .info {
+    position: relative;
+    color: #fff;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .info h1 {
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.card .info p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.card .info .readmore {
+    background: #fff;
+    padding: 0.5rem 1rem;
+    color: #000;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .4s ease-in-out;
+}
+
+.card .info .readmore:hover {
+    background: #ef8514;
+    color: #fff;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+.card .info .btn {
+    background: #fff;
+    padding: 0.5rem 1rem;
+    color: #000;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .4s ease-in-out;
+}
+
+.card .info .btn:hover {
+    background: #ef8514;
+    color: #fff;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}

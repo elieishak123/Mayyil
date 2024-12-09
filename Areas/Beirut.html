@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beirut</title>
+    <link rel="stylesheet" href="Beirut.css">
+</head>
+<body>
+    <!-- Filter Section -->
+    <section>
+        <ul>
+            <li class="active">All Menu</li>
+            <li>Historic and Cultural Sites</li>
+            <li>Art and Creative Districts</li>
+            <li>Natural Attractions</li>
+            <li>Museums</li>
+        </ul>
+    </section>
+ 
+    <!-- Image Slider Section -->
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('image/p1.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Explore the Heart of Beirut</span>
+                    <span class="caption-text">Experience the timeless customs and vibrant heritage of Lebanon.</span>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('image/p2.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Vibrant city where rich history</span>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('image/p3.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Blending Mediterranean charm with Middle Eastern energy.</span>
+                </div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-container">
+        <section class="info-section">
+            <h2 class="info-title">Discover Beirut</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <a href="Reviews/index.html" class="add-review-container" data-area-id="1" onclick="navigateToReview(this)" title="Add Review">+</a>
+                    <img src="image/p4.jpg" data-filter="Natural Attractions">
+                    <h3>Pigeon Rocks (Raouche Rock)</h3>
+                    <p>Admire Beirut's iconic natural rock formations by the sea. You can 
+                        take a stroll along the Corniche or dine with a view of the rocks.</p>
+                    <p>Location: Raouche</p>
+                    <a href="seeReviews/seereviews.html?area_id=1" class="Reviews">Reviews</a>
+                    <button class="add-to-planner" data-area-id="1">ADD TO PLANNER</button>
+                </div>
+                
+                <div class="info-card">
+                    <a href="Reviews/index.html" class="add-review-container" data-area-id="2" onclick="navigateToReview(this)" title="Add Review">+</a>
+                    <img src="image/p5.jpeg" data-filter="Museums">
+                    <h3>National Museum of Beirut</h3>
+                    <p>Dive into Lebanon's history with impressive collections 
+                    of ancient artifacts, including Phoenician relics, Roman statues,
+                     and Byzantine mosaics.</p>
+                    <p>Location: Badaro</p>
+                    <a href="seeReviews/seereviews.html?area_id=2" class="Reviews">Reviews</a>
+                    <button class="add-to-planner" data-area-id="2">ADD TO PLANNER</button>
+                </div>
+                
+                <div class="info-card">
+                    <a href="Reviews/index.html" class="add-review-container" data-area-id="3" onclick="navigateToReview(this)" title="Add Review">+</a>
+                    <img src="image/p6.jpg" data-filter="Art and Creative Districts">
+                    <h3>Gemmayzeh Street</h3>
+                    <p>Known for its art scene, Gemmayzeh is full of art galleries, 
+                        quirky boutiques, colorful street art, and charming cafes.</p>
+                    <p>Location: Gemmayzeh</p>
+                    <a href="seeReviews/seereviews.html?area_id=3" class="Reviews">Reviews</a>
+                    <button class="add-to-planner" data-area-id="3">ADD TO PLANNER</button>
+                </div>
+                
+                <div class="info-card">
+                    <a href="Reviews/index.html" class="add-review-container" data-area-id="4" onclick="navigateToReview(this)" title="Add Review">+</a>
+                    <img src="image/p7.jpg" data-filter="Shopping and Modern Architecture">
+                    <h3>Beirut Souks</h3>
+                    <p>This modern shopping center blends luxury brands with Lebanese crafts, 
+                    housed in beautiful contemporary architecture</p>
+                    <p>Location: Downtown Beirut</p>
+                    <a href="seeReviews/seereviews.html?area_id=4" class="Reviews">Reviews</a>
+                    <button class="add-to-planner" data-area-id="4">ADD TO PLANNER</button>
+                </div>
+                
+                <div class="info-card">
+                    <a href="Reviews/index.html" class="add-review-container" data-area-id="5" onclick="navigateToReview(this)" title="Add Review">+</a>
+                    <img src="image/p2.jpg" data-filter="Historic and Cultural Sites">
+                    <h3>Martyrs Square</h3>
+                    <p>A historic landmark symbolizing Lebanese resilience, Martyrs' 
+                    Square is close to other attractions like Mohammad Al-Amin Mosque.</p>
+                    <p>Location: Downtown Beirut</p>
+                    <a href="seeReviews/seereviews.html?area_id=5" class="Reviews">Reviews</a>
+                    <button class="add-to-planner" data-area-id="5">ADD TO PLANNER</button>
+                </div>
+
+                <!-- Add other info cards here similarly with onclick="addToPlanner('<Place Name>')" -->
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

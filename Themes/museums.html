@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museums in Lebanon - Mayyil Aa Baladi</title>
+    <link rel="stylesheet" href="museums.css">
+</head>
+<body>
+
+    <!-- Image Slider Section -->
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/museum1.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">A Journey Through Time;</span>
+                    <span class="caption-text">Explore Lebanon's rich history and culture in its renowned museums.</span>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/museum2.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Art and Artifacts;</span>
+                    <span class="caption-text">Discover ancient relics and world-class art collections across Lebanon.</span>
+                </div>
+            </div>
+            <div class="slide fade">
+                <div class="slide-background" style="background-image: url('images/museum3.jpg');"></div>
+                <div class="caption">
+                    <span class="caption-bold">Cultural Heritage;</span>
+                    <span class="caption-text">Witness Lebanon's heritage preserved through its historic museums.</span>
+                </div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="header-overlay">
+            <h1>Explore Museums in Lebanon</h1>
+            <p>Delve into Lebanon's history, art, and culture with a tour of its renowned museums.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-container">
+        
+        <!-- Key Highlights -->
+        <section class="highlights">
+            <h2 class="highlights-description">
+                <span style="color: #89CFF0; font-weight: bold;">Museums of Lebanon: Windows to the Past</span>
+                Lebanon’s museums offer a fascinating glimpse into its ancient civilizations, modern art, and diverse heritage. Discover artifacts, artworks, and exhibitions that tell Lebanon’s story.
+            </h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <img src="images/national.jpg" alt="National Museum of Beirut">
+                    <div class="caption-overlay">
+                        <h3>National Museum of Beirut</h3>
+                        <p>Explore Lebanon’s rich archaeological heritage, with artifacts from the Bronze Age to the Ottoman period. A must-visit for history enthusiasts.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/sursock.jpg" alt="Sursock Museum">
+                    <div class="caption-overlay">
+                        <h3>Sursock Museum</h3>
+                        <p>Located in a beautiful mansion, this modern art museum showcases contemporary Lebanese and international art, along with vibrant cultural events.</p>
+                    </div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/gibran.jpg" alt="Gibran Museum">
+                    <div class="caption-overlay">
+                        <h3>Gibran Museum</h3>
+                        <p>Dedicated to Lebanon's famous poet and artist, Kahlil Gibran, this museum houses his original manuscripts, drawings, and personal belongings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2 class="info-title">Top Museums to Visit in Lebanon</h2>
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <img src="images/museum7.jpeg" alt="Museum of Lebanese Prehistory">
+                    <h3>Museum of Lebanese Prehistory</h3>
+                    <p>Discover Lebanon's ancient roots with artifacts from the prehistoric era, showcasing early human life in the region.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/museum8.jpg" alt="Robert Mouawad Private Museum">
+                    <h3>Robert Mouawad Private Museum</h3>
+                    <p>A luxurious museum showcasing art, jewelry, and rare artifacts, including Byzantine mosaics and antique weaponry.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/museum9.jpg" alt="Soap Museum">
+                    <h3>Soap Museum</h3>
+                    <p>Located in Sidon, this unique museum explores Lebanon's soap-making heritage and the ancient art of soap production.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/museum10.png" alt="Audi Mosaic Museum">
+                    <h3>Audi Mosaic Museum</h3>
+                    <p>A museum with an impressive collection of Byzantine mosaics and artifacts, offering insights into ancient decorative arts.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+                <div class="info-card">
+                    <img src="images/museum11.jpg" alt="Memory of Time Museum">
+                    <h3>Memory of Time Museum</h3>
+                    <p>This museum in Byblos explores Lebanon's ancient fossils, highlighting the country's geological history and marine fossils.</p>
+                    <a href="#" class="find-out-more">FIND OUT MORE</a>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Mayyil Aa Baladi | Discover the Heart of Lebanon</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+        
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let captions = document.getElementsByClassName("caption");
+        
+            if (slideIndex >= slides.length) { 
+                slideIndex = 0; 
+            }
+            if (slideIndex < 0) { 
+                slideIndex = slides.length - 1; 
+            }
+        
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                captions[i].style.opacity = "0"; 
+            }
+        
+            slides[slideIndex].style.display = "block";
+            captions[slideIndex].style.opacity = "1"; 
+        }
+    </script>
+</body>
+</html>

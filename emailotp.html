@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="emailotpStyle.css" />
+</head>
+<body>
+    <div class="form-box otp">
+        <!-- OTP Verification Step -->
+        <div class="container step2">
+            <h2>OTP Verification</h2>
+            <p>One-time password has been sent to <span id="verifyEmail"></span></p>
+            <div class="otp-form">
+                <p>Enter the 4-digit code sent via email</p>
+                <div class="otp-group">
+                    <input type="tel" maxlength="1" id="otp1" oninput="moveFocus(this, 'otp2')" />
+                    <input type="tel" maxlength="1" id="otp2" oninput="moveFocus(this, 'otp3')" />
+                    <input type="tel" maxlength="1" id="otp3" oninput="moveFocus(this, 'otp4')" />
+                    <input type="tel" maxlength="1" id="otp4" />
+                </div>
+                <button id="verifyButton" onclick="verifyOtp(event)">
+                    Verify &rarr;
+                </button>
+            </div>
+            <input type="hidden" id="hiddenEmail" />
+        </div>
+    </div>
+
+    <script>
+        const API_URL = "https://mayyil-aa-libnen-production.up.railway.app"; // Updated backend URL
+  
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve email from sessionStorage
+            const email = sessionStorage.getItem('userEmail');
+            console.log("Retrieved email from sessionStorage:", email);
+
+            if (email) {
+                document.getElementById('verifyEmail').textContent = email;
+                document.getElementById('hiddenEmail').value = email; // Set hidden email field
+            } else {
+                alert("Email not found. Please try signing up again.");
+                console.error("Email not found in sessionStorage.");
+                window.location.href = "index.html"; // Redirect back to signup page
+            }
+        });
+  
+        // Automatically move focus to the next OTP input field
+        function moveFocus(current, nextFieldId) {
+            if (current.value.length === 1) {
+                document.getElementById(nextFieldId).focus();
+            }
+        }
+  
+        async function verifyOtp(event) {
+            event.preventDefault();
+            const email = document.getElementById("hiddenEmail").value;
+            const otp = [
+                document.getElementById("otp1").value,
+                document.getElementById("otp2").value,
+                document.getElementById("otp3").value,
+                document.getElementById("otp4").value
+            ].join('');
+  
+            try {
+                const response = await fetch(`${API_URL}/verify-otp`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, otp })
+                });
+                const result = await response.json();
+  
+                if (result.success) {
+                    alert("OTP verified successfully!");
+                    window.location.href = "index.html";
+                } else {
+                    alert(result.message || "Invalid OTP, please try again.");
+                }
+            } catch (error) {
+                console.error("Network error:", error);
+                alert("Failed to connect to server.");
+            }
+        }
+    </script>
+  
+</body>
+</html>

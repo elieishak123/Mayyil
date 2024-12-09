@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mayyil 3a Libnen</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <div class="nav__logo">
+            <h2 class="Mayyil">Mayyil</h2>
+        </div>
+        <nav class="navigation">
+            <a href="Themes/themes.html">Themes</a>
+            <a href="Areas/index.html">Areas</a>
+            <a href="https://www.google.com/maps/place/Lebanon/@33.8729425,35.1880287,9z/" target="_blank">Google Maps</a>
+            <a href="Contact/index.html">Contact</a>
+            <a href="" class="plan-icon" id="plan-icon">
+                <i class="fas fa-map-marked-alt"></i> My Plan
+            </a>
+            <button class="btnLogin-popup" id="login-button">Login</button>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="container__left">
+            <div class="content">
+                <h1>DISCOVER<br />LEBANON</h1>
+                <p>
+                    Lebanon is a beautiful country with a mix of history, culture, and
+                    nature. Visitors can explore ancient ruins, enjoy the lively streets
+                    of Beirut, or relax on its Mediterranean beaches. The mountains are
+                    perfect for hiking and offer great views. Lebanese food is
+                    delicious, and the people are friendly and welcoming. Even though
+                    it's small, Lebanon has a lot to offer, making it a great place to
+                    visit.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forms Wrapper -->
+    <div class="wrapper">
+      <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+      </span>
+
+      <!-- Login Form -->
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" name="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" name="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <a href="#" class="forgot-password-link">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Registration Form -->
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form id="registration-form">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" name="username" required />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" name="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" name="password" required />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox" id="terms-checkbox" /> I agree to the terms & conditions
+            </label>
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="login-register">
+            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Forgot Password Form -->
+      <div class="form-box forgot-password">
+        <h2>Reset Password</h2>
+        <form id="forgot-password-form">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" name="email" required />
+            <label>Email</label>
+          </div>
+          <button type="submit" class="btn">Send Reset Link</button>
+          <div class="login-register">
+            <p>Remembered? <a href="#" class="login-link">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

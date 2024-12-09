@@ -1,0 +1,89 @@
+/* General Styles for the Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    margin: 0;
+    background-color: #f9f9f9; /* Soft white background */
+    padding: 20px 0;
+}
+
+/* Main Title Styling */
+.main-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #89CFF0; /* Baby blue for the main title */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Emergency Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center-align all cards */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Individual Card Styling */
+.card {
+    background: #ffffff; /* White card background */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 30px;
+    width: 300px; /* Fixed width for each card */
+    text-align: center; /* Center-align the text in cards */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Title Styling */
+.card-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50; /* Dark blue for title */
+    margin-bottom: 10px;
+}
+
+/* Card Details Styling */
+.card-details {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444; /* Dark gray for readability */
+    margin-bottom: 15px;
+}
+
+/* Phone Number Styling */
+.phone-number {
+    font-weight: bold;
+    color: #005f99; /* Deeper blue for phone numbers */
+    font-size: 1.3em;
+}
+
+/* Icon Styling (Optional) */
+.card-icon {
+    font-size: 3em;
+    color: #89CFF0; /* Baby blue for icons */
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+}

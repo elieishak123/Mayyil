@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<title>Add Review</title>
+</head>
+<body>
+	<!-- Review Form -->
+	<div class="wrapper">
+		<h3>Add Review</h3>
+		<form id="review-form">
+			<!-- Opinion Textarea -->
+			<div class="textarea-box">
+				<label for="opinion">Your Review</label>
+				<textarea id="opinion" name="opinion" autocomplete="off" cols="30" rows="5" placeholder="Your opinion..." required></textarea>
+			</div>
+
+			<!-- Rating -->
+			<div class="rating">
+				<label for="rating">Rating:</label>
+				<select id="rating" name="rating" required>
+					<option value="">Select Rating</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			
+			<!-- Button Group -->
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button type="button" class="btn cancel" id="cancel-btn">Cancel</button>
+			</div>
+		</form>		
+	</div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// Backend URL
+			const baseURL = "https://mayyil-aa-libnen-production.up.railway.app";
+
+			const reviewFormContent = document.getElementById("review-form");
+			const cancelBtn = document.getElementById("cancel-btn");
+
+			// Retrieve area_id from query parameters
+			const areaId = new URLSearchParams(window.location.search).get("areaId");
+
+			// Handle the cancel button functionality
+			cancelBtn.addEventListener("click", () => {
+				window.history.back(); // Redirects to the previous page
+			});
+
+			// Handle the review submission
+			reviewFormContent.addEventListener("submit", async (event) => {
+				event.preventDefault();
+
+				// Get form field values
+				const opinion = document.getElementById("opinion").value.trim();
+				const rating = document.getElementById("rating").value;
+
+				// Validate input fields
+				if (!opinion || !rating) {
+					alert("Please fill in all the fields before submitting the review.");
+					return;
+				}
+
+				if (!areaId) {
+					alert("Area ID is missing. Cannot submit the review.");
+					return;
+				}
+
+				try {
+					// Submit the review to the backend
+					const response = await fetch(`${baseURL}/api/reviews`, {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						credentials: 'include', // Include authentication cookies
+						body: JSON.stringify({
+							review: opinion,
+							rating,
+							areaId, // Pass area_id here
+						}),
+					});
+
+					if (!response.ok) {
+						const error = await response.json();
+						throw new Error(error.message || 'Failed to submit review');
+					}
+
+					// Alert success and redirect back
+					alert('Review submitted successfully!');
+					window.history.back(); // Go back to the previous page after submission
+				} catch (error) {
+					console.error('Error submitting review:', error);
+					alert(error.message || 'Failed to submit the review. Please try again.');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

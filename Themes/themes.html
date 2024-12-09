@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Slider</title>
+    <link rel="stylesheet" href="themes.css">
+</head>
+<body>
+
+    <!-- Image Slider Section (New Part) -->
+    <div class="image-slider">
+        <div class="slide-item active" style="background-image: url('./images/slider1.jpg');">
+            <div class="overlay">
+                <h1>Explore Lebanon</h1>
+                <p>Discover the beauty of Lebanon through various themes and experiences.</p>
+            </div>
+        </div>
+        <div class="slide-item" style="background-image: url('./images/slider3.jpg');">
+            <div class="overlay">
+                <h1>Adventure Awaits</h1>
+                <p>Explore the mountains, beaches, and ski resorts that Lebanon has to offer.</p>
+            </div>
+        </div>
+        <div class="slide-item" style="background-image: url('./images/slider2.jpeg');">
+            <div class="overlay">
+                <h1>Cultural Heritage</h1>
+                <p>Uncover the rich history and cultural landmarks of Lebanon.</p>
+            </div>
+        </div>
+        <!-- Add buttons to navigate between slides -->
+        <!-- Add buttons to navigate between slides -->
+<!-- Add buttons to navigate between slides -->
+            <button class="prev-slide" onclick="prevSlide()">❮</button>
+            <button class="next-slide" onclick="nextSlide()">❯</button>
+
+    </div>
+
+    <!-- Slider Section (Your Existing Section) -->
+    <div class="container">
+
+        <!-- Slider for Themes -->
+        <div class="slide">
+    
+            <!-- Cultural Tourism -->
+            <div class="item" style="background-image: url('./images/cultural-tourism.jpeg');">
+                <div class="content">
+                    <div class="name">Cultural Tourism</div>
+                    <div class="des">Discover Lebanon's rich cultural heritage through its landmarks, festivals, and traditional arts.</div>
+                    <button onclick="window.location.href='cultural-tourism.html'">See More</button>
+                </div>
+            </div>
+    
+            <!-- Gastronomy and Oenology -->
+            <div class="item" style="background-image: url('./images/gastronomy-oenology.jpg');">
+                <div class="content">
+                    <div class="name">Gastronomy and Oenology</div>
+                    <div class="des">Indulge in the rich flavors of Lebanese cuisine and explore the country’s ancient wine culture.</div>
+                    <button onclick="window.location.href='gastronomy-oenology.html'">See More</button>
+                </div>
+            </div>
+    
+            <!-- Nature Sports and Adventures -->
+            <div class="item" style="background-image: url('./images/nature-sports-adventures.jpg');">
+                <div class="content">
+                    <div class="name">Nature Sports and Adventures</div>
+                    <div class="des">From hiking to rock climbing, Lebanon is a haven for nature lovers and adventure seekers.</div>
+                    <button onclick="window.location.href='nature-sports-adventures.html'">See More</button>
+                </div>
+            </div>
+    
+            <!-- Ski Resorts -->
+            <div class="item" style="background-image: url('./images/ski-resorts.jpg');">
+                <div class="content">
+                    <div class="name">Ski Resorts</div>
+                    <div class="des">Experience the thrill of skiing in Lebanon’s top mountain resorts during winter.</div>
+                    <button onclick="window.location.href='ski-resorts.html'">See More</button>
+                </div>
+            </div>
+    
+            <!-- Museums -->
+            <div class="item" style="background-image: url('./images/museums.jpeg');">
+                <div class="content">
+                    <div class="name">Museums</div>
+                    <div class="des">Explore Lebanon's rich history and culture through its numerous museums and exhibitions.</div>
+                    <button onclick="window.location.href='museums.html'">See More</button>
+                </div>
+            </div>
+    
+            <!-- History -->
+            <div class="item" style="background-image: url('./images/festival1.png');">
+                <div class="content">
+                    <div class="name">Festivals</div>
+                    <div class="des">Experience the magic of festivals that bring culture, music, and joy to life, uniting communities in vibrant celebrations.</div>
+                    <button onclick="window.location.href='festivals.html'">See More</button>
+                </div>
+            </div>
+    
+            <!-- Seaside and Beaches -->
+            <div class="item" style="background-image: url('./images/seaside-beaches.jpeg');">
+                <div class="content">
+                    <div class="name">Seaside and Beaches</div>
+                    <div class="des">Relax on Lebanon’s beautiful Mediterranean coast, with pristine beaches and crystal-clear waters.</div>
+                    <button onclick="window.location.href='seaside-beaches.html'">See More</button>
+                </div>
+            </div>
+    
+            <!-- Wellness Tourism -->
+            <div class="item" style="background-image: url('./images/wellness-tourism.jpg');">
+                <div class="content">
+                    <div class="name">Wellness Tourism</div>
+                    <div class="des">Rejuvenate your body and mind in Lebanon’s serene wellness retreats and spas.</div>
+                    <button onclick="window.location.href='wellness-tourism.html'">See More</button>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+        
+    
+    <script src="themes.js"></script>
+    
+</body>
+</html>
