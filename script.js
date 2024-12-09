@@ -57,10 +57,7 @@ planIcon.addEventListener("click", () => {
             console.log('User verified:', data);
             window.location.href = "plan.html"; // Redirect to planner
         })
-        .catch((error) => {
-            console.error("Error validating token:", error);
-            alert("You need to log in to access the planner.");
-        });
+        
 });
 
 
