@@ -48,16 +48,21 @@ planIcon.addEventListener("click", () => {
     fetch(`${backendURL}/verify-token`, { credentials: 'include' })
         .then((response) => {
             if (response.ok) {
-                window.location.href = "plan.html"; // Redirect to planner if logged in
+                return response.json();
             } else {
-                alert("You need to log in to access the planner.");
+                throw new Error('Invalid or missing token');
             }
+        })
+        .then((data) => {
+            console.log('User verified:', data);
+            window.location.href = "plan.html"; // Redirect to planner
         })
         .catch((error) => {
             console.error("Error validating token:", error);
             alert("You need to log in to access the planner.");
         });
 });
+
 
 // Function to update the UI state based on login status
 function updateUIState(isLoggedIn) {
