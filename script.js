@@ -45,9 +45,22 @@ iconClose.addEventListener('click', () => {
 
 // Event listener for "My Plan" button
 planIcon.addEventListener("click", () => {
-    
-    window.location.href = "plan.html"; // Redirect to planner regardless of token status
-        
+    fetch(`${backendURL}/verify-token`, { credentials: 'include' })
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Invalid or missing token');
+            }
+        })
+        .then((data) => {
+            console.log('User verified:', data);
+            window.location.href = "plan.html"; // Redirect to planner
+        })
+        .catch((error) => {
+            console.error("Error validating token:", error);
+            alert("You need to log in to access the planner.");
+        });
 });
 
 
