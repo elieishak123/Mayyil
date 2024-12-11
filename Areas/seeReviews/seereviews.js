@@ -91,6 +91,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     } catch (error) {
         console.error("Error in frontend script:", error);
-        reviewsContainer.innerHTML = `<p>Failed to load reviews. Please try again later.</p>`;
+        reviewsContainer.innerHTML = `<p>Failed to load reviews. You'll have to login to post and see reviews.</p>`;
     }
 });
