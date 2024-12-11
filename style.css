@@ -336,3 +336,13 @@ header {
     color: white;
     line-height: 1.5;
 }
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #666;
+  }
+  

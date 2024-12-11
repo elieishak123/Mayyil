@@ -173,7 +173,19 @@ function handleLogout() {
             console.error('Error during logout:', error);
         });
 }
-
+function togglePasswordVisibility(inputId, iconElement) {
+    const passwordInput = document.getElementById(inputId);
+    const icon = iconElement.querySelector("ion-icon");
+  
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      icon.setAttribute("name", "eye-off-outline");
+    } else {
+      passwordInput.type = "password";
+      icon.setAttribute("name", "eye-outline");
+    }
+  }
+  
 // Check login state on page load
 document.addEventListener('DOMContentLoaded', () => {
     fetch(`${backendURL}/verify-token`, {
